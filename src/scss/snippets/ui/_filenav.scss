@@ -1,45 +1,66 @@
 /* Improve File Navigation */
+
+.nav-folder-title {
+	margin: 0;
+	padding: 0.5em 1.25em;
+	width: 100%;
+
+	// Colorize Icon & Folder Title to Purple
+	&,
+	&:hover,
+	& .obsidian-icon-folder-icon svg {
+		color: var(--purple) !important;
+		fill: var(--purple);
+
+		// But only if they are not collapsed
+		.nav-folder.is-collapsed & {
+			color: var(--text-normal) !important;
+			fill: var(--text-normal);
+		}
+	}
+
+	&:hover {
+		.nav-folder.is-collapsed & {
+			background: var(--bg4);
+		}
+	}
+
+	&:not(.is-active) {
+		&:hover {
+			body:not(.is-grabbing) & {
+				background-color: var(--bg4) !important;
+			}
+		}
+	}
+
+	// Property to .nav-folder-title and when it's being dragged over
+	&,
+	&.is-being-dragged-over {
+		border-radius: 0;
+	}
+}
+
 .nav-file {
 	margin: 0;
 	padding: 0;
 	transition: border-color 5s ease-in;
-}
 
-.nav-folder-title {
-	margin: 0;
-	padding: 0.2em 1.25em;
-	width: 100%;
-}
+	.nav-file-title {
+		border-radius: 0;
+		border: var(--accent-width) solid transparent;
+		transition: border-color 0.5s ease-out;
+		margin: 0;
+		padding: 0.5em 1.25em;
 
-.nav-file-title {
-	border-radius: 0;
-	border: var(--accent-width) solid transparent;
-	transition: border-color 0.5s ease-out;
-	margin: 0;
-	padding: 0.6em 1.25em;
-}
+		&:hover {
+			background-color: var(--bg4) !important;
+		}
 
-/* colorize folder title and icon */
-.nav-folder-title,
-.nav-folder-title:hover,
-.nav-folder-title .obsidian-icon-folder-icon svg {
-	color: var(--purple) !important;
-	fill: var(--purple);
-}
-
-.nav-folder.is-collapsed .nav-folder-title .obsidian-icon-folder-icon svg,
-.nav-folder.is-collapsed .nav-folder-title {
-	color: var(--text-normal) !important;
-	fill: var(--text-normal);
-}
-
-.nav-folder.is-collapsed .nav-folder-title:hover {
-	background: var(--bg4);
-	border-radius: 0;
-}
-
-body:not(.is-grabbing) .nav-file-title:not(.is-active):hover {
-	background-color: var(--bg4) !important;
+		&.is-active,
+		.is-flashing & {
+			border-left-color: var(--purple);
+		}
+	}
 }
 
 .is-flashing {
@@ -50,16 +71,7 @@ body:not(.is-grabbing) .nav-file-title:not(.is-active):hover {
 	transition: background 0.5s ease-in-out;
 }
 
-.nav-file-title.is-active,
-.is-flashing .nav-file-title {
-	border-left-color: var(--purple);
-}
-
 .is-being-dragged {
-	background: var(--bg4) !important;
+	//background: var(--bg4) !important;
 	border-color: var(--purple);
-}
-
-.nav-folder-title.is-being-dragged-over {
-	border-radius: 0;
 }
