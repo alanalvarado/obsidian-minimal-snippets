@@ -5,10 +5,24 @@
 	transition: border-color 5s ease-in;
 }
 
-/* colorize folder title and icon */
-.nav-folder-title .obsidian-icon-folder-icon svg,
-.nav-folder-title:hover,
 .nav-folder-title {
+	margin: 0;
+	padding: 0.2em 1.25em;
+	width: 100%;
+}
+
+.nav-file-title {
+	border-radius: 0;
+	border: var(--accent-width) solid transparent;
+	transition: border-color 0.5s ease-out;
+	margin: 0;
+	padding: 0.6em 1.25em;
+}
+
+/* colorize folder title and icon */
+.nav-folder-title,
+.nav-folder-title:hover,
+.nav-folder-title .obsidian-icon-folder-icon svg {
 	color: var(--purple) !important;
 	fill: var(--purple);
 }
@@ -24,25 +38,7 @@
 	border-radius: 0;
 }
 
-/* .nav-folder-title, */
-.nav-file-title {
-	border-radius: 0;
-	border: var(--accent-width) solid transparent;
-	transition: border-color 0.5s ease-out;
-}
-
-.nav-folder-title {
-	margin: 0 0 0 0.6em;
-	padding: 0.2em 1.25em;
-	width: 100%;
-}
-
-.nav-file-title {
-	margin: 0;
-	padding: 0.6em 1.25em;
-}
-
-.nav-file-title:not(.is-active):hover {
+body:not(.is-grabbing) .nav-file-title:not(.is-active):hover {
 	background-color: var(--bg4) !important;
 }
 
