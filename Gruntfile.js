@@ -11,7 +11,7 @@ Read more at gruntjs.com
 See readme for more details:
 https://github.com/kepano/obsidian-minimal
 */
-const sass = require('node-sass');
+const sass = require('dart-sass');
 require('dotenv').config()
 
 module.exports = function(grunt) {
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
                 },
             unminified: {
                 options: {
-                    sourcemap: 'none'
+                    sourceMap: true
                 },
                 files: {
                     'src/css/main.css' : 'src/scss/index.scss'
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     style: 'compressed',
-                    sourcemap: 'none'
+                    sourceMap: false
                 },
                 files: {
                     'src/css/main.min.css' : 'src/scss/index.scss'
@@ -71,12 +71,12 @@ module.exports = function(grunt) {
         concat_css: {
             dist: {
                 files: {
-                  'obsidian-snippets.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
+                  'dist/obsidian-snippets.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
             },
             unminified: {
                 files: {
-                  'minimal-snippets.css': ['src/css/license.css','src/css/main.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
+                  'src/css/minimal-snippets.css': ['src/css/license.css','src/css/main.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
             }
         },
