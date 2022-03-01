@@ -1,0 +1,69 @@
+/* Improve File Navigation */
+.nav-file {
+	margin: 0;
+	padding: 0;
+	transition: border-color 5s ease-in;
+}
+
+/* colorize folder title and icon */
+.nav-folder-title .obsidian-icon-folder-icon svg,
+.nav-folder-title:hover,
+.nav-folder-title {
+	color: var(--purple) !important;
+	fill: var(--purple);
+}
+
+.nav-folder.is-collapsed .nav-folder-title .obsidian-icon-folder-icon svg,
+.nav-folder.is-collapsed .nav-folder-title {
+	color: var(--text-normal) !important;
+	fill: var(--text-normal);
+}
+
+.nav-folder.is-collapsed .nav-folder-title:hover {
+	background: var(--bg4);
+	border-radius: 0;
+}
+
+/* .nav-folder-title, */
+.nav-file-title {
+	border-radius: 0;
+	border: var(--accent-width) solid transparent;
+	transition: border-color 0.5s ease-out;
+}
+
+.nav-folder-title {
+	margin: 0 0 0 0.6em;
+	padding: 0.2em 1.25em;
+	width: 100%;
+}
+
+.nav-file-title {
+	margin: 0;
+	padding: 0.6em 1.25em;
+}
+
+.nav-file-title:not(.is-active):hover {
+	background-color: var(--bg4) !important;
+}
+
+.is-flashing {
+	background: var(--bg4);
+	box-shadow: none;
+	border-radius: 0;
+	outline: none;
+	transition: background 0.5s ease-in-out;
+}
+
+.nav-file-title.is-active,
+.is-flashing .nav-file-title {
+	border-left-color: var(--purple);
+}
+
+.is-being-dragged {
+	background: var(--bg4) !important;
+	border-color: var(--purple);
+}
+
+.nav-folder-title.is-being-dragged-over {
+	border-radius: 0;
+}

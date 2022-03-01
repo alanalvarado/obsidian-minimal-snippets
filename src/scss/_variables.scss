@@ -1,0 +1,41 @@
+:root {
+    --red: rgb(255, 105, 97);
+    --orange: rgb(255, 179, 64);
+    --yellow: rgb(255, 212, 38);
+    --green: rgb(48, 222, 75);
+    --mint: rgb(102, 212, 207);
+    --teal: rgb(93, 230, 255);
+    --cyan: rgb(112, 215, 255);
+    --blue: rgb(64, 156, 255);
+    --indigo: rgb(125, 122, 255);
+    --purple: rgb(218, 143, 255);
+    --pink: rgb(255, 100, 130);
+    --brown: rgb(181, 148, 105);
+    --gray: rgb(152, 152, 157);
+    --slategrey: rgb(112, 128, 144);
+    --black: rgb(30, 30, 30);
+
+    --atom-bg: rgb(126, 190, 247);
+    --atom-bg-accent: rgb(15, 130, 230);
+    --atom-bg-text: rgb(26, 66, 133);
+
+    --accent-headings: hsl(0, 0%, 65%);
+    --accent-width: 3px;
+
+    --font-family-ui: "SF Pro", sans-serif;
+    --font-family-headings: "Montserrat", "SF Pro", "Helvetica Neue", sans-serif;
+    --font-family-default: Bookerly, "Georgia Pro", serif;
+    --font-family-console: "SF Mono", "Fira Code", monospace;
+}
+
+.theme-dark {
+    --mask: rgba(255, 255, 255, 0.08);
+    --mask-code: rgba(0, 0, 0, 0.25);
+    --bg4: rgb(79, 86, 102);
+    --text-normal: #abb2c0;
+}
+
+.theme-light {
+    --mask: rgba(0, 0, 0, 0.025);
+    --bg4: rgb(79, 86, 102);
+}

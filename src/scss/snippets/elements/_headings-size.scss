@@ -1,0 +1,57 @@
+.markdown-preview-section {
+	font-size: 1.2rem !important;
+}
+
+/* START RELATIONS */
+.markdown-preview-section li {
+	font-size: 1rem;
+	margin-bottom: .2em;
+}
+
+.markdown-preview-section li ul {
+	margin-top: .5em !important;
+	margin-bottom: 1.5em !important;
+}
+/* END RELATIONS */
+
+.HyperMD-header-1 .cm-header-1,
+.markdown-preview-section h1 {
+	font-size: 6rem;
+	font-weight: 800;
+	line-height: 1;
+}
+
+.HyperMD-header-2 .cm-header-2,
+.markdown-preview-section h2 {
+	font-size: 4rem;
+	font-weight: 800;
+	line-height: 1
+}
+
+.HyperMD-header-3 .cm-header-3,
+.markdown-preview-section h3 {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1
+}
+
+.HyperMD-header-4 .cm-header-4,
+.markdown-preview-section h4 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1
+}
+
+.HyperMD-header-5 .cm-header-5,
+.markdown-preview-section h5 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1
+}
+
+.HyperMD-header-6 .cm-header-6,
+.markdown-preview-section h6 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1
+}

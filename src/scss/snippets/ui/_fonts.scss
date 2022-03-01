@@ -1,0 +1,14 @@
+body.minimal-theme {
+    --font-monospace: var(--font-family-console);
+    --font-ui: var(--font-family-ui);
+    --text-editor: var(--font-family-default);
+    --text: var(--font-family-default);
+}
+
+/* FIX GUI FONT */
+/* MODAL WINDOWS */
+.modal *,
+/* FILENAME TITLE */
+.view-header-title {
+	font-family: var(--font-ui);
+}

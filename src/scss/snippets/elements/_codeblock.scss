@@ -1,0 +1,12 @@
+.HyperMD-codeblock,
+.markdown-preview-view pre {
+	background: var(--black) !important;
+}
+
+/* inline code block */
+.cm-s-obsidian span.cm-inline-code {
+	padding: .25em 0;
+}
+.markdown-preview-view code {
+	padding: .25em .5em;
+}

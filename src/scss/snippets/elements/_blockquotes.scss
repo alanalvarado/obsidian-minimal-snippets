@@ -1,0 +1,11 @@
+.markdown-preview-view blockquote {
+	border-left-width: var(--accent-width);
+	border-left-color: var(--purple);
+	background-color: var(--mask);
+	padding: 1em 2em;
+}
+
+.markdown-preview-view blockquote p + p {
+	padding-top: 1em;
+}
+

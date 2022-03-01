@@ -1,0 +1,53 @@
+/* .obsidian-metatable { */
+/* 	--metatable-font-family: var(--font-ui); */
+/* 	--metatable-foreground: var(--text-normal); */
+/* 	--metatable-key-background: var(--background-primary-alt); */
+/* 	--metatable-key-border-color: var(--background-primary-alt); */
+/* 	--metatable-value-background: var(--background-primary-alt); */
+/* } */
+
+/* .obsidian-metatable::part(value), */
+/* .obsidian-metatable::part(key) { */
+/*     padding:0.5rem 1rem; */
+/* 	color: var(--text); */
+/*   } */
+
+/* .obsidian-metatable::part(tag) { */
+/* 	color: var(--atom-bg-text); */
+/* 	background: var(--atom-bg); */
+/* 	border-radius: 0; */
+/* 	border-left: var(--accent-width) solid var(--atom-bg-accent); */
+/* } */
+
+/* .obsidian-metatable::part(link) { */
+/* 	white-space: normal; */
+/* } */
+
+
+.obsidian-metatable {
+	--metatable-font-family: var(--font-family-console);
+	--metatable-foreground: var(--text-faint);
+	--metatable-key-background: transparent;
+	--metatable-key-border-color: transparent;
+	--metatable-value-background: transparent;
+}
+
+.obsidian-metatable::part(value),
+.obsidian-metatable::part(key) {
+    padding:0.2em 1em;
+	color: var(--text);
+  }
+
+.obsidian-metatable::part(tag) {
+	/* color: ; */
+	margin: 0 0 0 -2px;
+	padding: 0;
+	background: transparent;
+	border-radius: 0;
+	/* border-left: var(--accent-width) solid var(--atom-bg-accent); */
+	text-decoration: underline;
+}
+
+.obsidian-metatable::part(link) {
+	white-space: normal;
+}

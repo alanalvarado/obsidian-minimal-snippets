@@ -1,0 +1,13 @@
+.isc-icon {
+  /** changes for all icons (except emoji). */
+	width: 1em !important;
+	height: 1em !important;
+	position: absolute;
+	margin: 0 .1em;
+}
+
+.isc-icon.isc-devicons {
+  /** changes for icons in the specific icon pack */
+	fill: white;
+	color: white;
+}
