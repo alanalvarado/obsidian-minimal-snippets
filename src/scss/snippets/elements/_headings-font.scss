@@ -1,21 +1,18 @@
-.HyperMD-header,
-.cm-header-1,
-.markdown-preview-section h1,
-.cm-header-2,
-.markdown-preview-section h2,
-.cm-header-3,
-.markdown-preview-section h3,
-.cm-header-4,
-.markdown-preview-section h4,
-.cm-header-5,
-.markdown-preview-section h5,
-.cm-header-6,
-.markdown-preview-section h6 {
+.HyperMD-header.HyperMD-header-1,
+.HyperMD-header.HyperMD-header-2,
+.HyperMD-header.HyperMD-header-3,
+.HyperMD-header.HyperMD-header-4,
+.HyperMD-header.HyperMD-header-5,
+.HyperMD-header.HyperMD-header-6,
+	{
 	font-family: var(--font-family-headings);
-	font-weight: 500;
+	font-weight: 900;
+	font-variant: normal;
 }
 
 .admonition-title-markdown {
 	font-family: var(--font-family-headings);
 	font-weight: 500;
 }
+
+
