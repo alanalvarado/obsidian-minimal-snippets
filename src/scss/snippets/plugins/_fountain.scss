@@ -1,0 +1,29 @@
+.screenplay {
+    width: 816px !important;
+    background: var(--mask-code);
+    font-family: 'Courier Prime' !important;
+    font-size: 12pt !important;
+    line-height: 1.15 !important;
+    padding: 96px 96px 96px 144px  !important;
+    color: var(--text-normal) !important;
+    /*box-shadow: 0 0 0 1px var(--mask);*/
+}
+
+.screenplay>.dialogue p {
+    margin-right: 20% !important;
+}
+
+.screenplay>.dialogue h4 {
+    margin-bottom: 0 !important;
+}
+
+.markdown-preview-view hr {
+    border-color: #da615c; !important;
+}
+
+div.screenplay > p > span.italic {
+    margin-top: 500px;
+    color: #333; !important;
+}
+
+
