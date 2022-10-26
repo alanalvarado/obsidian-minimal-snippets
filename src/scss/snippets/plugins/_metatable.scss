@@ -1,35 +1,17 @@
-/* .obsidian-metatable { */
-/* 	--metatable-font-family: var(--font-ui); */
-/* 	--metatable-foreground: var(--text-normal); */
-/* 	--metatable-key-background: var(--background-primary-alt); */
-/* 	--metatable-key-border-color: var(--background-primary-alt); */
-/* 	--metatable-value-background: var(--background-primary-alt); */
-/* } */
-
-/* .obsidian-metatable::part(value), */
-/* .obsidian-metatable::part(key) { */
-/*     padding:0.5rem 1rem; */
-/* 	color: var(--text); */
-/*   } */
-
-/* .obsidian-metatable::part(tag) { */
-/* 	color: var(--atom-bg-text); */
-/* 	background: var(--atom-bg); */
-/* 	border-radius: 0; */
-/* 	border-left: var(--accent-width) solid var(--atom-bg-accent); */
-/* } */
-
-/* .obsidian-metatable::part(link) { */
-/* 	white-space: normal; */
-/* } */
-
-
+/*
+obsidian-metatable 0.14.3
+Documentation
+https://github.com/arnau/obsidian-metatable/blob/main/docs/sections/customising_colours_and_symbols.md
+*/
 .obsidian-metatable {
 	--metatable-font-family: var(--font-family-console);
-	--metatable-foreground: var(--text-faint);
-	--metatable-key-background: transparent;
+	--metatable-text-primary: var(--text-faint);
+	--metatable-background-primary: transparent;
 	--metatable-key-border-color: transparent;
 	--metatable-value-background: transparent;
+	--metatable-summary-background-focus: transparent;
+
+	--metatable-key-focus: transparent;
 }
 
 .obsidian-metatable::part(value),
@@ -44,7 +26,7 @@
 	padding: 0;
 	background: transparent;
 	border-radius: 0;
-	/* border-left: var(--accent-width) solid var(--atom-bg-accent); */
+	//border-left: var(--accent-width) solid var(--atom-bg-accent);
 	text-decoration: underline;
 }
 
