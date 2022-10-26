@@ -37,7 +37,8 @@ module.exports = function(grunt) {
                     sourceMap: true
                 },
                 files: {
-                    'src/css/main.css' : 'src/scss/index.scss'
+                    'src/css/main.css' : 'src/scss/index.scss',
+                    'src/css/hide-asset-folders.css' : 'src/scss/hide-asset-folders.scss'
                 }
             },
             dist: {
@@ -46,7 +47,7 @@ module.exports = function(grunt) {
                     sourceMap: false
                 },
                 files: {
-                    'src/css/main.min.css' : 'src/scss/index.scss'
+                    'src/css.min/main.min.css' : 'src/scss/index.scss'
                 }
             }
         },
@@ -61,7 +62,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'src/css/main.min.css' : 'src/css/main.min.css'
+                    'src/css.min/main.min.css' : 'src/css/main.min.css'
                 }
             }
         },
@@ -71,12 +72,7 @@ module.exports = function(grunt) {
         concat_css: {
             dist: {
                 files: {
-                  'dist/obsidian-snippets.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
-                }
-            },
-            unminified: {
-                files: {
-                  'src/css/minimal-snippets.css': ['src/css/license.css','src/css/main.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
+                  'dist/minimal-snippets.css': ['src/css/license.css','src/css.min/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
                 }
             }
         },
@@ -86,18 +82,20 @@ module.exports = function(grunt) {
         copy: {
             local: { 
                 expand: true,
-                src: 'obsidian-snippets.css',
+                flatten: true,
+                filter: 'isFile',
+                src: ['src/css/**'],
                 dest: process.env.HOME + process.env.OBSIDIAN_PATH,
-                rename: function(dest, src) {
-                   return dest + 'minimal-snippets.css';
-                } 
+                // rename: function(dest, src) {
+                //    return dest;
+                // }
             }
         },
 
         /* Watch for changes, and compile new changes */ 
         watch: {
             css: {
-                files: ['src/**/*.scss','src/**/*.css'],
+                files: ['src/**/*.scss'],
                 tasks: ['env','sass:unminified','sass:dist','cssmin','concat_css','copy',]
             }
         }
